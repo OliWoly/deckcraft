@@ -131,6 +131,7 @@ app's JSON control channel (`deckcraft --control PORT`).
 
 | Date | What landed |
 |---|---|
+| 2026-10-21 | PowerPoint 97–2003 `.ppt`, `.pot` and `.pps` files open (#239): a new `crates/ppt` reads the compound file, the presentation records and the OfficeArt drawings into the model (masters, title masters as layouts, slides, styled text, shapes, pictures, notes). Saving asks for a new name; a `.pps` from the system starts the show |
 | 2026-10-18 | Native chart sidecar bytes move from JSON arrays into referenced ZIP entries, with shared media byte/item limits and bounded reads; older inline sidecars still load. Synthetic format regressions cover large workbooks and malformed members |
 | 2026-10-17 | Opening a file caps absurd effect sizes (glow, soft edges, shadows, reflections, on shapes, text and table text) at what Format Shape allows: a glow of 10^18 pt in a .pptx made rendering ask for 34 GB and abort |
 | 2026-10-17 | Opening a .deckcraft file whose shapes repeat an id gives the repeats fresh ids (groups, layouts and masters too), so the deck validates and edits by id find one shape |
